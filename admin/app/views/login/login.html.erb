@@ -1,0 +1,12 @@
+<h1>Login no Sistema Unimed</h1>
+
+<form action="<%= logar_path %>" method="POST">
+	<%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+	login
+	<input type="text" name="login"/><br>
+	senha
+	<input type="password" name="password"/><br>
+	<input type="submit" value="logar"/><br>
+	<%= @mensagem_de_falha %>
+
+</form>
