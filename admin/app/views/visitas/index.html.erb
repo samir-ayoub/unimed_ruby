@@ -1,0 +1,31 @@
+<h1> Visitas </h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nome do Paciente</th>
+      <th>Endereço</th>
+      <th>Dia</th>
+      <th>Horas</th>
+      <th>Descricao</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @visitas.each do |visita| %>
+      <tr>
+        <td><%= visita.paciente.nome %></td>
+        <td><%= visita.endereco %></td>
+        <td><%= visita.dia %></td>
+        <td><%= visita.hora %></td>
+        <td><%= visita.descricao %></td>
+        <td><%= link_to 'Show', visita_path(visita) %></td>
+        <td><%= link_to 'Edit', edit_visita_path(visita) %></td>
+        <td><%= link_to 'Destroy', visita_delete_path(visita), method: :delete, data: { confirm: 'Confirma exclusão?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to "Cadastrar visita", visita_new_path %>

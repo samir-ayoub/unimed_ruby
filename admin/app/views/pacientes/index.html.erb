@@ -8,8 +8,10 @@
       <th>Nome</th>
       <th>Sobrenome</th>
       <th>Telefone</th>
-      <th>Login</th>
-      <th>Senha</th>
+      <th>Codigo de Identificacao</th>
+      <th>Endereço</th>
+      <th>Cidade</th>
+      <th>Estado</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -20,8 +22,10 @@
         <td><%= paciente.nome %></td>
         <td><%= paciente.sobrenome %></td>
         <td><%= paciente.telefone %></td>
-        <td><%= paciente.login %></td>
-        <td><%= paciente.senha %></td>
+        <td><%= paciente.codigo_identificacao %></td>
+        <td><%= paciente.endereco %></td>
+        <td><%= paciente.cidade %></td>
+        <td><%= paciente.estado %></td>
         <td><%= link_to 'Show', paciente %></td>
         <td><%= link_to 'Edit', edit_paciente_path(paciente) %></td>
         <td><%= link_to 'Destroy', paciente, method: :delete, data: { confirm: 'Are you sure?' } %></td>

@@ -28,7 +28,7 @@ class PacientesController < ApplicationController
 
     respond_to do |format|
       if @paciente.save
-        format.html { redirect_to @paciente, notice: 'Paciente was successfully created.' }
+        format.html { redirect_to pacientes_path, notice: 'Paciente was successfully created.' }
         format.json { render :show, status: :created, location: @paciente }
       else
         format.html { render :new }
@@ -69,6 +69,6 @@ class PacientesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def paciente_params
-      params.require(:paciente).permit(:nome, :sobrenome, :telefone, :login, :senha)
+      params.require(:paciente).permit(:nome, :sobrenome, :telefone, :codigo_identificacao, :endereco, :cidade, :estado)
     end
 end

@@ -1,0 +1,19 @@
+<form action="<%= url %>" method="POST">
+	<%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+
+	Nome:
+	<select name="paciente_id" required title="Favor selecionar um paciente">
+		<option value="">selecione</option>
+		<% pacientes.each do |paciente| %>
+	  	<option value="<%= paciente.id %>" <%= "selected" if(paciente.id == visita.paciente.id) rescue "" %>><%= paciente.nome %></option>
+	  <% end %>
+	</select>
+	<br>
+
+	Endereço: <input type="text" name="endereco" value="<%= visita.endereco%>" required title="digite o endereço"><br>
+	Dia: <input type="date" name="dia" value="<%= visita.dia%>" required title="coloque o dia"><br>
+	Horas: <input type="number" name="hora" value="<%= visita.hora%>" required title="coloque a hora"><br>
+	Descrição: <textarea name="descricao"><%= visita.descricao%></textarea><br>
+	<input type="submit" value="Ok">
+
+</form>

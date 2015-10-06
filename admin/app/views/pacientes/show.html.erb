@@ -16,13 +16,23 @@
 </p>
 
 <p>
-  <strong>Login:</strong>
-  <%= @paciente.login %>
+  <strong>Codigo de identificação:</strong>
+  <%= @paciente.codigo_identificacao %>
 </p>
 
 <p>
-  <strong>Senha:</strong>
-  <%= @paciente.senha %>
+  <strong>Endereço:</strong>
+  <%= @paciente.endereco %>
+</p>
+
+<p>
+  <strong>Cidade:</strong>
+  <%= @paciente.cidade %>
+</p>
+
+<p>
+  <strong>Estado:</strong>
+  <%= @paciente.estado %>
 </p>
 
 <%= link_to 'Edit', edit_paciente_path(@paciente) %> |
