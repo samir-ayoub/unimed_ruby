@@ -1,0 +1,7 @@
+<form action="<%=url%>" method="POST">
+	<%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+	Nome: <input type="text" name="nome" value="<%= assistente.nome%>" required title="digite o nome"><br>
+	Número da Chapa: <input type="text" name="chapa" value="<%= assistente.chapa%>"required title="digite a chapa"><br>
+	Cargo: <input type="text" name="cargo" value="<%= assistente.cargo%>"required title="digite o cargo"><br>
+	<input type="submit" value="Ok">
+</form>

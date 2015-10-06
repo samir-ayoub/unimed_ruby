@@ -36,6 +36,17 @@ Rails.application.routes.draw do
   post 'visitas/:id' => 'visitas#update', as: :visita_update
   delete 'visitas/:id/delete' => 'visitas#delete', as: :visita_delete
 
+  get 'assistentes' => 'assistentes#index', as: :assistente_index
+  get 'assistentes/novo' => 'assistentes#new', as: :assistente_new
+  post 'assistentes/criar' => 'assistentes#criar', as: :assistente_criar
+  get 'assistentes/:id' => 'assistentes#show', as: :assistente
+  get 'assistentes/:id/edit' => 'assistentes#edit', as: :edit_assistente
+  post 'assistentes/:id' => 'assistentes#update', as: :assistente_update
+  delete 'assistentes/:id/delete' => 'assistentes#delete', as: :assistente_delete
+
+
+
+
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

@@ -1,0 +1,27 @@
+<h1> Assistentes </h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Número da chapa</th>
+      <th>Cargo</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @assistentes.each do |assistente| %>
+      <tr>
+        <td><%= assistente.nome %></td>
+        <td><%= assistente.chapa %></td>
+        <td><%= assistente.cargo %></td>
+        <td><%= link_to 'Show', assistente_path(assistente) %></td>
+        <td><%= link_to 'Edit', edit_assistente_path(assistente) %></td>
+        <td><%= link_to 'Destroy', assistente_delete_path(assistente), method: :delete, data: { confirm: 'Confirma exclusão dessa-porra?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to "Cadastrar assistente", assistente_new_path %>
